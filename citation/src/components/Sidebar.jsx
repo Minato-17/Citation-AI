@@ -5,13 +5,13 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const menuItems = [
-    { id: 'dashboard', icon: '🏠', label: 'Dashboard' },
-    { id: 'upload', icon: '📤', label: 'Upload Papers' },
-    { id: 'library', icon: '📚', label: 'My Library' },
-    { id: 'citations', icon: '📝', label: 'Citations' },
-    { id: 'cloud', icon: '☁️', label: 'Cloud' },
-    { id: 'favorites', icon: '⭐', label: 'Favorites' },
-    { id: 'settings', icon: '⚙️', label: 'Settings' },
+    { id: 'dashboard', icon: '◉', label: 'Dashboard' },
+    { id: 'upload', icon: '↑', label: 'Upload Papers' },
+    { id: 'library', icon: '▦', label: 'My Library' },
+    { id: 'citations', icon: '″', label: 'Citations' },
+    { id: 'cloud', icon: '☁', label: 'Cloud' },
+    { id: 'favorites', icon: '★', label: 'Favorites' },
+    { id: 'settings', icon: '⚙', label: 'Settings' },
   ];
 
   return (
@@ -21,7 +21,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
         onClick={() => setIsCollapsed(!isCollapsed)}
         title={isCollapsed ? 'Expand' : 'Collapse'}
       >
-        {isCollapsed ? '➡️' : '⬅️'}
+        {isCollapsed ? '→' : '←'}
       </button>
       
       <div className="sidebar-menu">
@@ -39,12 +39,8 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
 
       <div className="sidebar-footer">
         <div className="sidebar-item">
-          <span className="sidebar-icon">❓</span>
+          <span className="sidebar-icon">?</span>
           {!isCollapsed && <span className="sidebar-label">Help</span>}
-        </div>
-        <div className="sidebar-item">
-          <span className="sidebar-icon">🚪</span>
-          {!isCollapsed && <span className="sidebar-label">Logout</span>}
         </div>
       </div>
     </aside>

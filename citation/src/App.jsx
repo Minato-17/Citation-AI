@@ -6,6 +6,7 @@ import UploadDashboard from './components/UploadDashboard'
 import Cloud from './components/Cloud'
 import Login from './components/Login'
 import { AuthProvider, useAuth } from './context/AuthContext'
+import { ThemeProvider } from './context/ThemeContext'
 
 function AppContent() {
   const [activeTab, setActiveTab] = useState('upload')
@@ -68,9 +69,11 @@ function AppContent() {
 
 function App() {
   return (
-    <AuthProvider>
-      <AppContent />
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <AppContent />
+      </AuthProvider>
+    </ThemeProvider>
   )
 }
 
