@@ -41,7 +41,7 @@
 }
 
 .navbar-search:focus-within {
-  border-color: var(--accent-color);
+  border-color: var(--text-secondary);
   background: var(--bg-primary);
 }
 

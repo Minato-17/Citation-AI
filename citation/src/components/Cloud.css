@@ -26,8 +26,8 @@
 }
 
 .add-to-cloud-btn {
-  background: var(--accent-color);
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-primary);
   border: none;
   padding: 10px 20px;
   border-radius: 10px;
@@ -38,7 +38,7 @@
 }
 
 .add-to-cloud-btn:hover {
-  background: var(--accent-hover);
+  background: var(--text-secondary);
   transform: scale(1.02);
 }
 
@@ -89,12 +89,12 @@
 }
 
 .cloud-file-card:hover {
-  border-color: var(--accent-color);
+  border-color: var(--text-secondary);
   box-shadow: 0 4px 12px var(--shadow);
 }
 
 .file-owner {
-  color: var(--accent-color);
+  color: var(--text-secondary);
   font-size: 0.8125rem;
   font-weight: 500;
   margin-top: 8px;
@@ -220,12 +220,12 @@
 }
 
 .user-file-item:hover {
-  border-color: var(--accent-color);
+  border-color: var(--text-secondary);
   background: var(--bg-secondary);
 }
 
 .user-file-item.selected {
-  border-color: var(--accent-color);
+  border-color: var(--text-primary);
   background: var(--bg-secondary);
 }
 
@@ -233,7 +233,7 @@
   width: 18px;
   height: 18px;
   cursor: pointer;
-  accent-color: var(--accent-color);
+  accent-color: var(--text-primary);
 }
 
 .file-icon-small {
@@ -287,13 +287,13 @@
 }
 
 .add-btn {
-  background: var(--accent-color);
+  background: var(--text-primary);
   border: none;
-  color: white;
+  color: var(--bg-primary);
 }
 
 .add-btn:hover:not(:disabled) {
-  background: var(--accent-hover);
+  background: var(--text-secondary);
   transform: scale(1.02);
 }
 

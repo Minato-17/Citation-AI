@@ -194,24 +194,22 @@ const Cloud = () => {
     <div className="cloud-container">
       <div className="cloud-header">
         <div>
-          <h1>☁️ Cloud Storage</h1>
+          <h1>Cloud Storage</h1>
           <p>Shared repository of research papers accessible to all users</p>
         </div>
         <button className="add-to-cloud-btn" onClick={handleOpenAddModal}>
-          ➕ Add to Cloud
+          Add to Cloud
         </button>
       </div>
 
       <div className="cloud-stats">
         <div className="stat-card">
-          <div className="stat-icon">📄</div>
           <div className="stat-content">
             <h3>{cloudFiles.length}</h3>
             <p>Papers in Cloud</p>
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">👥</div>
           <div className="stat-content">
             <h3>{new Set(cloudFiles.map(f => f.owner)).size}</h3>
             <p>Contributors</p>
@@ -221,13 +219,13 @@ const Cloud = () => {
 
       {!user && (
         <div className="no-user-message">
-          ⚠️ Please log in to view and add files to Cloud.
+          Please log in to view and add files to Cloud.
         </div>
       )}
 
       {isLoadingCloud && user && (
         <div className="loading-message">
-          ⏳ Loading Cloud files...
+          Loading Cloud files...
         </div>
       )}
 
@@ -237,7 +235,6 @@ const Cloud = () => {
           <div className="files-grid">
             {cloudFiles.map((file) => (
               <div key={file.id} className="cloud-file-card">
-                <div className="file-icon">📄</div>
                 <div className="file-info">
                   <h4>{file.name}</h4>
                   <div className="file-meta">
@@ -246,7 +243,7 @@ const Cloud = () => {
                     <span>{file.uploadDate}</span>
                   </div>
                   <div className="file-owner">
-                    👤 {file.owner}
+                    {file.owner}
                   </div>
                 </div>
                 <div className="file-actions">
@@ -258,7 +255,7 @@ const Cloud = () => {
                       className="action-btn view-btn" 
                       title="View in Google Drive"
                     >
-                      👁️
+                      View
                     </a>
                   )}
                   {file.webContentLink && (
@@ -269,7 +266,7 @@ const Cloud = () => {
                       className="action-btn download-btn" 
                       title="Download"
                     >
-                      ⬇️
+                      Download
                     </a>
                   )}
                 </div>
@@ -296,11 +293,11 @@ const Cloud = () => {
 
             {isLoadingUser ? (
               <div className="modal-loading">
-                ⏳ Loading your files...
+                Loading your files...
               </div>
             ) : userFiles.length === 0 ? (
               <div className="modal-empty">
-                <p>📂 No PDF files found in your drive.</p>
+                <p>No PDF files found in your drive.</p>
                 <p>Upload files to your drive first, then you can add them to Cloud.</p>
               </div>
             ) : (
@@ -321,7 +318,6 @@ const Cloud = () => {
                           checked={selectedFiles.includes(file.id)}
                           onChange={() => {}}
                         />
-                        <div className="file-icon-small">📄</div>
                         <div className="file-info-small">
                           <div className="file-name">{file.name}</div>
                           <div className="file-details">

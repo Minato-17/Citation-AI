@@ -64,8 +64,8 @@
 }
 
 .sidebar-item.active {
-  background: var(--accent-color);
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-primary);
 }
 
 .sidebar-icon {

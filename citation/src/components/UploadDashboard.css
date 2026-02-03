@@ -42,13 +42,8 @@
 }
 
 .stat-card:hover {
-  border-color: var(--accent-color);
+  border-color: var(--text-secondary);
   box-shadow: 0 4px 12px var(--shadow);
-}
-
-.stat-icon {
-  font-size: 2rem;
-  opacity: 0.8;
 }
 
 .stat-content h3 {
@@ -88,22 +83,16 @@
 }
 
 .upload-area.drag-active {
-  border-color: var(--accent-color);
+  border-color: var(--text-primary);
   background: var(--bg-secondary);
 }
 
 .upload-area:hover {
-  border-color: var(--accent-color);
+  border-color: var(--text-secondary);
 }
 
 .upload-label {
   cursor: pointer;
-}
-
-.upload-icon {
-  font-size: 3rem;
-  margin-bottom: 16px;
-  opacity: 0.6;
 }
 
 .upload-area h3 {
@@ -132,8 +121,8 @@
 }
 
 .browse-btn {
-  background: var(--accent-color);
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-primary);
   border: none;
   padding: 12px 24px;
   border-radius: 10px;
@@ -145,7 +134,7 @@
 }
 
 .browse-btn:hover {
-  background: var(--accent-hover);
+  background: var(--text-secondary);
   transform: scale(1.02);
 }
 
@@ -179,13 +168,8 @@
 }
 
 .file-card:hover {
-  border-color: var(--accent-color);
+  border-color: var(--text-secondary);
   box-shadow: 0 4px 12px var(--shadow);
-}
-
-.file-icon {
-  font-size: 2rem;
-  opacity: 0.8;
 }
 
 .file-info {
@@ -218,19 +202,19 @@
 }
 
 .file-status.completed {
-  background: rgba(52, 199, 89, 0.1);
-  color: #34c759;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 .file-status.processing, 
 .file-status.uploading {
-  background: rgba(255, 149, 0, 0.1);
-  color: #ff9500;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
 }
 
 .file-status.failed {
-  background: rgba(255, 59, 48, 0.1);
-  color: #ff3b30;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
 }
 
 .file-actions {
@@ -255,7 +239,7 @@
 
 .action-btn:hover {
   background: var(--bg-tertiary);
-  border-color: var(--accent-color);
+  border-color: var(--text-secondary);
   transform: scale(1.05);
 }
 

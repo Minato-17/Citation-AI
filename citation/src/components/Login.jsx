@@ -9,7 +9,6 @@ const Login = () => {
     <div className="login-container">
       <div className="login-card">
         <div className="login-header">
-          <div className="login-icon">📚</div>
           <h1>Research Paper Dashboard</h1>
           <p className="login-subtitle">
             Your intelligent assistant for managing research papers and citations
@@ -19,19 +18,15 @@ const Login = () => {
         <div className="login-content">
           <div className="features-list">
             <div className="feature-item">
-              <span className="feature-icon">✅</span>
               <span>Upload and organize research papers</span>
             </div>
             <div className="feature-item">
-              <span className="feature-icon">✅</span>
               <span>Extract citations automatically</span>
             </div>
             <div className="feature-item">
-              <span className="feature-icon">✅</span>
               <span>Personal Google Drive integration</span>
             </div>
             <div className="feature-item">
-              <span className="feature-icon">✅</span>
               <span>Analytics and insights</span>
             </div>
           </div>
@@ -82,13 +77,13 @@ const Login = () => {
 
           <div className="login-note">
             <p>
-              🔒 Sign in to access your personal research workspace
+              Sign in to access your personal research workspace
             </p>
             <p>
-              📁 A dedicated folder will be created for your papers
+              A dedicated folder will be created for your papers
             </p>
             <p className="setup-note">
-              ⚙️ First time? Make sure to configure Google API settings. 
+              First time? Make sure to configure Google API settings. 
               <br />
               See <strong>GOOGLE_SETUP.md</strong> for instructions.
             </p>

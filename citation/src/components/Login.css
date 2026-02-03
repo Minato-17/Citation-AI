@@ -35,12 +35,6 @@
   margin-bottom: 40px;
 }
 
-.login-icon {
-  font-size: 3.5rem;
-  margin-bottom: 16px;
-  opacity: 0.9;
-}
-
 .login-header h1 {
   color: var(--text-primary);
   margin-bottom: 8px;
@@ -81,11 +75,6 @@
   transform: translateX(4px);
 }
 
-.feature-icon {
-  font-size: 1.25rem;
-  opacity: 0.8;
-}
-
 .feature-item span:last-child {
   color: var(--text-primary);
   font-size: 0.875rem;
@@ -95,7 +84,7 @@
 .google-login-btn {
   width: 100%;
   padding: 14px 20px;
-  background: var(--accent-color);
+  background: var(--text-primary);
   border: none;
   border-radius: 12px;
   font-size: 0.9375rem;
@@ -111,7 +100,7 @@
 }
 
 .google-login-btn:hover:not(:disabled) {
-  background: var(--accent-hover);
+  background: var(--text-secondary);
   transform: scale(1.01);
 }
 
@@ -145,7 +134,7 @@
   padding: 20px;
   background: var(--bg-secondary);
   border-radius: 12px;
-  border-left: 3px solid var(--accent-color);
+  border-left: 3px solid var(--text-secondary);
 }
 
 .login-note p {
@@ -164,7 +153,7 @@
 }
 
 .setup-note strong {
-  color: var(--accent-color);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -188,9 +177,5 @@
 
   .login-header h1 {
     font-size: 1.75rem;
-  }
-
-  .login-icon {
-    font-size: 3rem;
   }
 }

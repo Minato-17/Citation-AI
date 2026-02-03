@@ -224,21 +224,18 @@ const UploadDashboard = () => {
 
       <div className="upload-stats">
         <div className="stat-card">
-          <div className="stat-icon">📄</div>
           <div className="stat-content">
             <h3>{uploadedFiles.length}</h3>
             <p>Papers Uploaded</p>
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">✅</div>
           <div className="stat-content">
             <h3>{uploadedFiles.filter(f => f.status === 'Completed').length}</h3>
             <p>Processed</p>
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">⏳</div>
           <div className="stat-content">
             <h3>{uploadedFiles.filter(f => f.status === 'Uploading...').length}</h3>
             <p>Uploading</p>
@@ -247,15 +244,8 @@ const UploadDashboard = () => {
       </div>
 
       {!user && (
-        <div className="no-user-message" style={{
-          padding: '20px',
-          textAlign: 'center',
-          backgroundColor: '#fff3cd',
-          borderRadius: '8px',
-          margin: '20px 0',
-          color: '#856404'
-        }}>
-          ⚠️ Please log in to upload and view your files.
+        <div className="no-user-message">
+          Please log in to upload and view your files.
         </div>
       )}
 
@@ -276,7 +266,6 @@ const UploadDashboard = () => {
             style={{ display: 'none' }}
           />
           <label htmlFor="file-upload" className="upload-label">
-            <div className="upload-icon">📤</div>
             <h3>Drag & Drop your research papers here</h3>
             <p>or click to browse files</p>
             <div className="supported-formats">
@@ -291,7 +280,7 @@ const UploadDashboard = () => {
 
       {isLoadingFiles && user && (
         <div style={{ textAlign: 'center', padding: '40px', fontSize: '18px' }}>
-          ⏳ Loading your files from Google Drive...
+          Loading your files from Google Drive...
         </div>
       )}
 
@@ -301,7 +290,6 @@ const UploadDashboard = () => {
           <div className="files-list">
             {uploadedFiles.map((file, index) => (
               <div key={file.id || index} className="file-card">
-                <div className="file-icon">📄</div>
                 <div className="file-info">
                   <h4>{file.name}</h4>
                   <div className="file-meta">
@@ -325,7 +313,7 @@ const UploadDashboard = () => {
                       className="action-btn view-btn" 
                       title="View in Google Drive"
                     >
-                      👁️
+                      View
                     </a>
                   )}
                   {file.webContentLink && (
@@ -336,7 +324,7 @@ const UploadDashboard = () => {
                       className="action-btn download-btn" 
                       title="Download"
                     >
-                      ⬇️
+                      Download
                     </a>
                   )}
                   <button 
@@ -344,7 +332,7 @@ const UploadDashboard = () => {
                     title="Delete"
                     onClick={() => removeFile(index)}
                   >
-                    🗑️
+                    Delete
                   </button>
                 </div>
               </div>
